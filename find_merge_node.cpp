@@ -2,8 +2,8 @@
 using namespace std;
 struct Node
 {
-	int data;
-	Node* next;
+    int data;
+    Node* next;
 };/*
    Find merge point of two linked lists
    Node is defined as
@@ -41,7 +41,9 @@ int FindMergeNode(Node *headA, Node *headB)
         fast = fast->next;
     }
     return slow->data;
-}int main()
+}
+
+int main()
 {
 	Node *A, *B, *C, *D,*E,*F,*G;
 	A = new Node();	B= new Node();  C= new Node(); D = new Node(); E = new Node(); F= new Node();G = new Node();
