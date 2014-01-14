@@ -10,7 +10,7 @@ void print(int *a, int n)
 	printf("\n");
 }
 
-void insertion(int *a, int n)
+void insertion_sort(int *a, int n)
 {
 	int i, j;
 	for (i = 1; i < n; i++) {
@@ -22,9 +22,10 @@ void insertion(int *a, int n)
 			else {
 				break;
 			}
-			print(a, n);
+			// print(a, n);
 		}
 		a[j] = temp;
+		// print(a, n);
 	}
 }
 
@@ -37,7 +38,7 @@ int main()
 	for (i = 0; i < n; i++) {
 		scanf("%d", &a[i]);
 	}
-	insertion(a, n);
+	insertion_sort(a, n);
 	print(a, n);
 	return 0;
 }
