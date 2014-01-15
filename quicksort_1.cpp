@@ -31,6 +31,7 @@ void partition(int *a, int n)
 	temp[i] = a[0];
 	memcpy(a, temp, n * sizeof(int));
 	reverse(a, i + 1, n - 1);
+	delete [] temp;
 }
 
 void print(int *a, int n)
@@ -50,5 +51,6 @@ int main()
 	}
 	partition(a, n);
 	print(a, n);
+	delete [] a;
 	return 0;
 }

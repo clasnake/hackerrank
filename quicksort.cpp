@@ -54,6 +54,7 @@ int partition_2(int *a, int start, int end)
 	temp[i] = a[start];
 	memcpy(a + start, temp, n * sizeof(int));
 	reverse(a, start + i + 1, end);
+	delete [] temp;
 	return start + i;
 }
 
@@ -77,5 +78,6 @@ int main()
 	}
 	quicksort(a, 0, n - 1);
 	// print(a, 0, n - 1);
+	delete [] a;
 	return 0;
 }

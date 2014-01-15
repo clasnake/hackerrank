@@ -53,6 +53,7 @@ int main()
 			cin >> a[i];
 		}
 		cout << count(a, 0, n - 1) << endl;
+		delete [] a;
 	}
 	return 0;
 }
