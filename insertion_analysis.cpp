@@ -26,6 +26,7 @@ long merge(long *a, long start, long mid, long end)
 	for (long i = start; i <= end; i++) {
 		a[i] = temp[k++];
 	}
+	delete [] temp;
 	return sum;
 }
 
