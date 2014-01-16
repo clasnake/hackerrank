@@ -24,7 +24,7 @@ void print(int *a, int start, int end)
 	cout << endl;
 }
 
-//Not inplace but doesn't need extra space
+//Inplace but not stable
 int partition_1(int *a, int start, int end)
 {
 	int p = start;
@@ -37,7 +37,7 @@ int partition_1(int *a, int start, int end)
 	return p;
 }
 
-//Inplace but need extra space O(n)
+//Stable but not inplace
 int partition_2(int *a, int start, int end)
 {
 	int n = end - start + 1;
