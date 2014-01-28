@@ -13,7 +13,7 @@ struct Node
        Node* next;
    }
 */
-int FindMergeNode(Node *headA, Node *headB)
+int find_merge_node(Node *headA, Node *headB)
 {
     if (headA->next == NULL) {
         return headA->data;
@@ -52,13 +52,13 @@ int main()
 	// case 1 = 
 	A->next = B; B->next = C; C->next = D; D->next = E; E->next = NULL;
 	F->next = G; G->next = C;
-	cout<<FindMergeNode(A,F)<<"\n";
+	cout<<find_merge_node(A,F)<<"\n";
 	//case 2.
 	A->next = B; B->next = C; C->next = E;  E->next = NULL;
 	F->next = G; G->next = D;D->next = C;
-	cout<<FindMergeNode(A,F)<<"\n";
+	cout<<find_merge_node(A,F)<<"\n";
 	//case 3:
 	A->next = B; B->next = E; E->next = NULL;
 	F->next = G; G->next = D;D->next = C; C->next = E;
-	cout<<FindMergeNode(A,F)<<"\n";
+	cout<<find_merge_node(A,F)<<"\n";
 }
